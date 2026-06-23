@@ -1,0 +1,102 @@
+/* ==========================================================================
+   1. GLOBAL RESET & DESIGN SYSTEM
+   ========================================================================== */
+:root {
+    --primary-color: #ffc107;
+    --dark-bg: #0f0f0f;
+    --body-bg: #f9f9f9;
+    --text-main: #333333;
+    --container-padding: 80px 0;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+html { scroll-behavior: smooth; }
+
+body { 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+    background: var(--body-bg); 
+    color: var(--text-main); 
+    line-height: 1.7; /* Readable text */
+}
+
+/* ==========================================================================
+   2. NAVBAR - STICKY & PROFESSIONAL
+   ========================================================================== */
+.navbar {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    padding: 20px 0 !important;
+}
+
+.navbar.scrolled {
+    padding: 10px 0 !important;
+    background: #000 !important;
+}
+
+/* ==========================================================================
+   3. HERO SECTION - READABILITY FIX
+   ========================================================================== */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* Text ko screen edge se dur rakhne ke liye */
+}
+
+/* ==========================================================================
+   4. LAYOUT & SPACING (Fixing Readability)
+   ========================================================================== */
+section { padding: var(--container-padding); }
+
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: var(--dark-bg);
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   5. FORM STYLING (Detailed & Professional)
+   ========================================================================== */
+.advanced-form {
+    background: white;
+    padding: 60px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.form-control, .form-select {
+    border: 2px solid #efefef !important;
+    padding: 18px !important;
+    border-radius: 15px !important;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 4px rgba(255,193,7,0.1) !important;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE MEDIA QUERIES (Professional breakpoints)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .display-1 { font-size: 2.5rem !important; }
+    .advanced-form { padding: 30px; }
+    section { padding: 50px 0; }
+}
